@@ -179,16 +179,9 @@ const Optimize = () => {
         >
           <Center>
             <FeatureBlock
-              title={"Optimize PDF Files"}
-              text={
-                "Local PDF allows you to optimize your PDF files to reduce their file size, without compromising on quality. Try our PDF optimizer tool today."
-              }
+              title={" PDF بهینه سازی"}
             />
           </Center>
-          <Text color={"gray.500"} px={[1, 10, 15]} pb={6}>
-            Get rid of redundant page resources like embedded fonts and images
-            and download optimized PDF files with better compression.
-          </Text>
           <DropzoneField setFiles={setFiles} files={files}></DropzoneField>
           <Toaster />
           <DonationModal
@@ -216,7 +209,7 @@ const Optimize = () => {
             color="primary.800"
             opacity="0.6"
           >
-            {files.length === 0 ? "" : "You can drag and drop files to sort"}
+            {files.length === 0 ? "" : "می‌توانید فایل‌ها را برای مرتب‌سازی بکشید و رها کنید"}
           </Text>
           <Flex row={2}>
             <Spacer />

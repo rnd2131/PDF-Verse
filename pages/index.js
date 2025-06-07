@@ -36,17 +36,13 @@ export default function Home() {
 
       <LandingLayout>
         <Hero
-          title="Local PDF Tools"
-          subtitle="Local PDF is a powerful PDF editing tool that uses WebAssembly technology to enable seamless editing directly in your web browser. With our platform, you can merge PDFs, optimize PDFs, and extract valuable information, such as images, from PDF files. Best of all, your files remain secure and confidential as they will not leave your system or be sent to another server. Trust Local PDF to be your go-to solution for all your PDF editing needs."
-          subtitle2="Get started now by merging, optimizing, or extracting PDFs in your browser."
-          image="/files.svg"
-          ctaText1="Start Merging PDFs"
+          ctaText1="چسباندن"
           ctaLink1="/merge"
-          ctaText2="Start Optimizing PDFs"
+          ctaText2="بهینه سازی"
           ctaLink2="/optimize"
-          ctaText3="Start Extracting Images, Text..."
+          ctaText3="خروجی گرفتن"
           ctaLink3="/extract"
-          ctaText4="Add Watermark"
+          ctaText4="اضافه کردن Watermark"
           ctaLink4="/watermark"
         />
       </LandingLayout>

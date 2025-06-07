@@ -126,7 +126,7 @@ const Extract = () => {
             disabled={isExtracting}
             variant="outline"
           >
-            Extract
+            خروجی گرفتن
           </Button>
         </>
       );
@@ -138,7 +138,7 @@ const Extract = () => {
           disabled={isExtracting || mode == "" || files.length == 0}
           onClick={extractFiles}
         >
-          Extract
+          خروجی گرفتن
         </Button>
       );
     }
@@ -147,39 +147,31 @@ const Extract = () => {
     if (mode == "") {
       return (
         <Text color={"gray.500"} px={[1, 10, 15]} pb={6}>
-          Extract Information from your PDF file. You can extract Images, Meta
-          Information, Text, Fonts and Pages from your PDF file
         </Text>
       );
     } else if (mode == "image") {
       return (
         <Text color={"gray.500"} px={[1, 10, 15]} pb={6}>
-          Extract all images from your PDF files:
         </Text>
       );
     } else if (mode == "meta") {
       return (
         <Text color={"gray.500"} px={[1, 10, 15]} pb={6}>
-          Extract the Meta-Information of your PDF-file
         </Text>
       );
     } else if (mode == "content") {
       return (
         <Text color={"gray.500"} px={[1, 10, 15]} pb={6}>
-          Extract the Content of your PDF. This will download all Text of your
-          PDF as a .txt File
         </Text>
       );
     } else if (mode == "pages") {
       return (
         <Text color={"gray.500"} px={[1, 10, 15]} pb={6}>
-          Extract all Pages from your PDF file
         </Text>
       );
     } else if (mode == "font") {
       return (
         <Text color={"gray.500"} px={[1, 10, 15]} pb={6}>
-          Extract all Fonts Formats from your PDF File
         </Text>
       );
     }
@@ -187,33 +179,6 @@ const Extract = () => {
 
   return (
     <>
-      <NextSeo
-        title="Extract PDF Information with Local PDF"
-        description="Extract Images, Text, Meta Information, Fonts and Pages from your PDF files directly in your browser. No need to upload your files to a third-party server."
-        canonical="https://localpdf.tech/extract"
-        openGraph={{
-          url: "https://localpdf.tech/extract",
-          title: "Extract PDF Information with Local PDF",
-          description:
-            "Extract Images, Text, Meta Information, Fonts and Pages from your PDF files directly in your browser. No need to upload your files to a third-party server.",
-          type: "website",
-          images: [
-            {
-              url: "https://raw.githubusercontent.com/julianfbeck/localpdfmerger/main/public/og-image-01.png",
-              width: 1200,
-              height: 630,
-              alt: "Local PDF allows you to extract information, such as images, from your PDF files directly in your browser. No need to upload your files to a third-party server.",
-              type: "image/jpeg",
-            },
-          ],
-          siteName: "Local PDF",
-        }}
-        twitter={{
-          handle: "@julianfbeck",
-          site: "@julianfbeck",
-          cardType: "summary_large_image",
-        }}
-      />
 
       <Flex width="full" height="full" align="center" justifyContent="center">
         <Box
@@ -227,11 +192,7 @@ const Extract = () => {
         >
           <Center>
             <FeatureBlock
-              title={"Extract Information"}
-              text={
-                "Local PDF allows you to extract information, such as images, from your PDF files directly in your browser. No need to upload your files to a third-party server."
-              }
-              h
+              title={"خروجی گرفتن از اطلاعات"}
             />
           </Center>
           {modeText()}
@@ -262,21 +223,21 @@ const Extract = () => {
             color="primary.800"
             opacity="0.6"
           >
-            {files.length === 0 ? "" : "You can drag and drop files to sort"}
+            {files.length === 0 ? "" : "می‌توانید فایل‌ها را برای مرتب‌سازی بکشید و رها کنید"}
           </Text>
           <Flex row={2}>
             <Container maxW="sm">
               <Select
                 onChange={(e) => selectedValues(e.target.value)}
                 colorScheme="blue"
-                placeholder="Select Information to Extract"
+                placeholder="انواع خروجی"
                 variant="outline"
               >
-                <option value="image">Extract All Images</option>
-                <option value="meta">Extract Meta Information</option>
-                <option value="content">Extract Text</option>
-                <option value="page">Extract all Pages</option>
-                <option value="font">Extract all Font Types</option>
+                <option value="image">خروجی گرفتن تمام عکس ها</option>
+                <option value="meta">META DATA خروجی گرفتن</option>
+                <option value="content">خروجی گرفتن نوشته ها</option>
+                <option value="page">خروجی گرفتن صفحات</option>
+                <option value="font">خروجی گرفتن فونت ها</option>
               </Select>
             </Container>
             <Spacer />

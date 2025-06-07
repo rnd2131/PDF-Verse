@@ -125,7 +125,7 @@ const Watermark = () => {
             disabled={isWatermarking || files.length <= 0}
             variant="outline"
           >
-            Add
+            اضافه کردن
           </Button>
         </>
       );
@@ -137,7 +137,7 @@ const Watermark = () => {
           disabled={isWatermarking || files.length <= 0 || text == ""}
           onClick={watermarkFiles}
         >
-          Add
+          اضافه کردن
         </Button>
       );
     }
@@ -145,34 +145,6 @@ const Watermark = () => {
 
   return (
     <>
-      <NextSeo
-        title="Add Watermarks to PDF Files with Local PDF"
-        description="Local PDF allows you to easily add watermarks to your PDF files. Try our PDF watermark tool today and protect your documents with a custom watermark."
-        canonical="https://localpdf.tech/watermark"
-        openGraph={{
-          url: "https://localpdf.tech/watermark",
-          title: "Add Watermarks to PDF Files with Local PDF",
-          description:
-            "Local PDF allows you to easily add watermarks to your PDF files. Try our PDF watermark tool today and protect your documents with a custom watermark.",
-          type: "website",
-          images: [
-            {
-              url: "https://raw.githubusercontent.com/julianfbeck/localpdfmerger/main/public/og-image-01.png",
-              width: 1200,
-              height: 630,
-              alt: "Add Watermarks to PDF Files with Local PDF",
-              type: "image/jpeg",
-            },
-          ],
-          siteName: "Local PDF",
-        }}
-        twitter={{
-          handle: "@julianfbeck",
-          site: "@julianfbeck",
-          cardType: "summary_large_image",
-        }}
-      />
-
       <Flex width="full" height="full" align="center" justifyContent="center">
         <Box
           p={8}
@@ -184,17 +156,10 @@ const Watermark = () => {
         >
           <Center>
             <FeatureBlock
-              title={"Add Watermarks"}
-              text={
-                "Local PDF allows you to easily add watermarks to your PDF files. Try our PDF watermark tool today and protect your documents with a custom watermark."
-              }
+              title={"اضافه کزدن Watermarks"}
             />
           </Center>
-          <Text color={"gray.500"} px={[1, 10, 15]} pb={6}>
-            Add a watermark or so called stamp to your pdf. The watermark
-            appears in front of the existing page content - sitting on top of
-            everything else on a page at a fixed position.
-          </Text>
+
           <DropzoneField setFiles={setFiles} files={files}></DropzoneField>
           <Toaster />
           <DonationModal
@@ -222,12 +187,12 @@ const Watermark = () => {
             color="primary.800"
             opacity="0.6"
           >
-            {files.length === 0 ? "" : "You can drag and drop files to sort"}
+            {files.length === 0 ? "" : "می‌توانید فایل‌ها را برای مرتب‌سازی بکشید و رها کنید"}
           </Text>
           <Flex row={2}>
             <Input
               onChange={(e) => setText(e.target.value)}
-              placeholder="Enter Watermark Text"
+              placeholder="نوشته Watermark"
               mr={5}
             ></Input>
             <Spacer />

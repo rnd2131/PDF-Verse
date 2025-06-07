@@ -49,7 +49,7 @@ export default function Hero({
           color="primary.800"
           textAlign={["center", "center", "left", "left"]}
         >
-          {title}
+        
         </Heading>
         <Heading
           as="h2"
@@ -60,7 +60,7 @@ export default function Hero({
           lineHeight={1.5}
           textAlign={["center", "center", "left", "left"]}
         >
-          {subtitle}
+        
         </Heading>
         <Heading
           as="h2"
@@ -68,10 +68,11 @@ export default function Hero({
           color="primary.800"
           opacity="0.8"
           fontWeight="normal"
+          display="flex"
           lineHeight={1.5}
           textAlign={["center", "center", "left", "left"]}
         >
-          {subtitle2}
+        
         </Heading>
         <Link href={ctaLink1}>
           <Button borderRadius="8px" py="4" px="4" lineHeight="1" size="md">
@@ -93,49 +94,9 @@ export default function Hero({
             {ctaText4}
           </Button>
         </Link>
-        <Text
-          fontSize="xs"
-          mt={2}
-          textAlign="center"
-          color="primary.800"
-          opacity="0.6"
-        >
-          Powered by{" "}
-          <u>
-            <a href="https://webassembly.org/">Webassembly</a>
-          </u>{" "}
-          and{" "}
-          <u>
-            <a href="https://github.com/pdfcpu/pdfcpu">pdfcpu</a>
-          </u>
-          . Built by{" "}
-          <u>
-            <a href="http://julianbeck.com/">Julian Beck</a>
-          </u>
-        </Text>
-        <Text
-          fontSize="xs"
-          mt={1}
-          textAlign="center"
-          color="primary.800"
-          opacity="0.6"
-        >
-          This app is Open Source, you can find the Code on{" "}
-          <u>
-            <a href="https://github.com/julianfbeck/localpdfmerger">Github</a>
-          </u>
-        </Text>
       </Stack>
       <Box w={{ base: "80%", sm: "60%", md: "50%" }} mb={{ base: 12, md: 0 }}>
         <Hide below="md">
-          <Image
-            src={image}
-            size="100%"
-            rounded="1rem"
-            shadow="2xl"
-            background="white"
-            alt="localpdf Logo with two PDF files side by side"
-          />
         </Hide>
       </Box>
     </Flex>

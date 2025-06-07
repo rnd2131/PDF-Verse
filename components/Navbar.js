@@ -20,7 +20,6 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import DonationModal from "./DonationModal";
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const { isOpen: ModalIsOpen, onOpen, onClose } = useDisclosure();
@@ -52,47 +51,20 @@ export default function WithSubnavigation() {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+        <Flex flex={{ base: 1 }} justify={{ base: "flex-end", md: "flex-end" }}>
           <Link href="/">
             <Text
-              textAlign={useBreakpointValue({ base: "center", md: "left" })}
+              textAlign={useBreakpointValue({ base: "right", md: "right" })}
               fontFamily={"heading"}
               color={"gray.800"}
             >
-              Home
+              خانه
             </Text>
           </Link>
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
-
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={"flex-end"}
-          direction={"row"}
-          spacing={6}
-        >
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={"pink.500"}
-            href={"#"}
-            onClick={() => onOpen()}
-            _hover={{
-              bg: "pink.300",
-            }}
-          >
-            Donate
-          </Button>
-          <DonationModal
-            isOpen={ModalIsOpen}
-            onOpen={onOpen}
-            onClose={onClose}
-          ></DonationModal>
-        </Stack>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -252,30 +224,26 @@ const NAV_ITEMS = [
     label: "Edit PDFs",
     children: [
       {
-        label: "Merge PDFs",
-        subLabel: "Merge multiple pdfs into one",
+        label: "PDF چسباندن",
+        subLabel: "چسباندن چندین فایل PDF به یک فایل واحد",
         href: "/merge",
       },
       {
-        label: "Optimize PDFs",
+        label: "PDF بهینه سازی",
         subLabel: "Optimize pdfs, reduce file size",
         href: "/optimize",
       },
 
       {
-        label: "Extract PDFs",
+        label: "PDF خروجی گرفتن از",
         subLabel: "Extract images, text, fonts or individual pages",
         href: "/extract",
       },
       {
-        label: "Add Watermark",
+        label: "اضافه کردن Watermark",
         subLabel: "Add a custom watermark to your pdf",
         href: "/watermark",
       },
     ],
-  },
-  {
-    label: "Github Repository",
-    href: "https://github.com/julianfbeck/localpdfmerger",
   },
 ];

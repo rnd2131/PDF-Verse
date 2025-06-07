@@ -161,7 +161,7 @@ const Merge = () => {
             onClick={mergeFiles}
             variant="outline"
           >
-            Merge
+            چسباندن
           </Button>
         </>
       );
@@ -173,7 +173,7 @@ const Merge = () => {
           disabled={files.length < 2 || isMerging}
           onClick={mergeFiles}
         >
-          Merge
+          چسباندن
         </Button>
       );
     }
@@ -189,34 +189,6 @@ const Merge = () => {
   };
   return (
     <>
-      <NextSeo
-        title="Merge PDF Files with Local PDF"
-        description="Local PDF allows you to merge multiple PDF files into one, directly in your browser. No need to upload your files to a third-party server."
-        canonical="https://localpdf.tech/merge"
-        openGraph={{
-          url: "https://localpdf.tech/merge",
-          title: "Merge PDF Files with Local PDF",
-          description:
-            "Local PDF allows you to merge multiple PDF files into one, directly in your browser. No need to upload your files to a third-party server.",
-          type: "website",
-          images: [
-            {
-              url: "https://raw.githubusercontent.com/julianfbeck/localpdfmerger/main/public/og-image-01.png",
-              width: 1200,
-              height: 630,
-              alt: "Merge PDF Files with Local PDF",
-              type: "image/jpeg",
-            },
-          ],
-          siteName: "Local PDF",
-        }}
-        twitter={{
-          handle: "@julianfbeck",
-          site: "@julianfbeck",
-          cardType: "summary_large_image",
-        }}
-      />
-
       <Flex width="full" height="full" align="center" justifyContent="center">
         <Box
           p={8}
@@ -228,10 +200,7 @@ const Merge = () => {
         >
           <Center>
             <FeatureBlock
-              title={"Merge PDFs"}
-              text={
-                "Local PDF allows you to merge multiple PDF files into one, directly in your browser. Upload your PDFs, sort them and merge! No need to upload your files to a third-party server."
-              }
+              title={"PDF چسباندن "}
             />
           </Center>
           <DropzoneField setFiles={setFiles} files={files}></DropzoneField>
@@ -261,7 +230,7 @@ const Merge = () => {
             color="primary.800"
             opacity="0.6"
           >
-            {files.length === 0 ? "" : "You can drag and drop files to sort"}
+            {files.length === 0 ? "" : "می‌توانید فایل‌ها را برای مرتب‌سازی بکشید و رها کنید"}
           </Text>
           <Flex row={2}>
             {!sorted ? (
@@ -271,7 +240,7 @@ const Merge = () => {
                 colorScheme="blue"
                 variant="outline"
               >
-                Sort
+                مرتب کردن
               </Button>
             ) : (
               <Button
@@ -280,7 +249,7 @@ const Merge = () => {
                 colorScheme="blue"
                 variant="outline"
               >
-                Sort A
+                حالت ۱
               </Button>
             )}
             <Spacer />
