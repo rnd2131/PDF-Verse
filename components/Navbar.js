@@ -221,7 +221,7 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: "Edit PDFs",
+    label: "ویرایش PDFs",
     children: [
       {
         label: "PDF چسباندن",
