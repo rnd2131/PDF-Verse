@@ -1,0 +1,5 @@
+Sitemap: https://localpdf.tech/sitemap.xml
+
+User-agent: *
+Disallow: /_next/static/
+Disallow: /api/
