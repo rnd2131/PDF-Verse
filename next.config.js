@@ -3,8 +3,8 @@ const withPWA = require("next-pwa");
 
 sitemap({
   baseUrl: "https://localpdf.tech",
-  pagesDirectory: __dirname + "/pages",
-  targetDirectory: "public/",
+  pagesDirectory: __dirname + "./",
+  targetDirectory: "./",
   ignoreIndexFiles: true,
 });
 
