@@ -10,9 +10,37 @@ function MyApp({ Component, pageProps }) {
   const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState('');
 
+  useEffect(() => {
+    // Check if running on client side
+    if (typeof window !== 'undefined') {
+      const lastAccess = localStorage.getItem('lastAccess');
+      const hasValidSubscription = localStorage.getItem('hasValidSubscription');
+      
+      const currentTime = new Date().getTime();
+      const oneMonth = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
+      
+      if (lastAccess && hasValidSubscription) {
+        // Check if one month has passed
+        if (currentTime - parseInt(lastAccess) > oneMonth) {
+          // Reset if more than a month has passed
+          localStorage.removeItem('hasValidSubscription');
+          localStorage.removeItem('lastAccess');
+          setShowOverlay(true);
+        } else {
+          setShowOverlay(false);
+        }
+      } else {
+        setShowOverlay(true);
+      }
+    }
+  }, []);
+
   const handleSubmit = () => {
     if (inputValue === '456712') {
       setShowOverlay(false);
+      // Save the current timestamp and subscription status
+      localStorage.setItem('lastAccess', new Date().getTime().toString());
+      localStorage.setItem('hasValidSubscription', 'true');
     } else {
       setError('کد نادرست است');
     }
