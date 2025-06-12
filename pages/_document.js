@@ -28,6 +28,21 @@ export default class MyDocument extends Document {
             href="/safari-pinned-tab.svg"
             color="#5bbad5"
           ></link>
+          {/* Google Analytics */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-FRKXG927DG"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-FRKXG927DG');
+              `,
+            }}
+          />
         </Head>
         <body>
           <Main />

@@ -4,8 +4,11 @@ import PlausibleProvider from "next-plausible";
 import WithSubnavigation from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
+import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics';
 
 function MyApp({ Component, pageProps }) {
+  useGoogleAnalytics();
+  
   const [showOverlay, setShowOverlay] = useState(true);
   const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState('');

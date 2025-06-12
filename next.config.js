@@ -1,5 +1,6 @@
 const sitemap = require("nextjs-sitemap-generator");
 const withPWA = require("next-pwa");
+const { default: Script } = require("next/script");
 
 sitemap({
   baseUrl: "https://localpdf.tech",
